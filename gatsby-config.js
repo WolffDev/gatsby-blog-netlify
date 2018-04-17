@@ -3,7 +3,7 @@ module.exports = {
     title: 'Gatsby Default Starter',
     desc: 'A new blog'
   },
-  pathPrefix: '/gatsby-blog-netlify',
+  // pathPrefix: '/gatsby-blog-netlify',
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
