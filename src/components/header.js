@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react';
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
@@ -26,32 +26,35 @@ const HeaderContainer = styled.div`
   z-index: 2;
 `;
 
-const Header = ({ data }) => (
-  <HeaderWrapper>
-    <HeaderContainer>
-      <Link to="/">
-        <img src={logo} alt="Gatsbyjs logo" className="header-logo" />
-      </Link>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="about">About</Link>
-          </li>
-        </ul>
-      </nav>
-    </HeaderContainer>
-    <Img style={{
-      position: 'absolute',
-      left: 0,
-      top: 0,
-      height: '100%',
-      width: '100%'
-    }}
-      sizes={data.background.sizes} />
-  </HeaderWrapper>
-)
-
-export default Header
+export default class Header extends Component {
+  render() {
+    const { data } = this.props;
+    return (
+      <HeaderWrapper>
+        <HeaderContainer>
+          <Link to="/">
+            <img src={logo} alt="Gatsbyjs logo" className="header-logo" />
+          </Link>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="about">About</Link>
+              </li>
+            </ul>
+          </nav>
+        </HeaderContainer>
+        <Img style={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          height: '100%',
+          width: '100%'
+        }}
+          sizes={data.background.sizes} />
+      </HeaderWrapper>
+    )
+  }
+};

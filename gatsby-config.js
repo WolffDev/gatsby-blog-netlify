@@ -8,7 +8,6 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -21,6 +20,12 @@ module.exports = {
       options: {
         name: 'src',
         path: `${__dirname}/src/`
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        excerpt_separator: `<!-- end -->`
       }
     },
   ],
