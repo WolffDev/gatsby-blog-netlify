@@ -20,13 +20,14 @@ const HeaderContainer = styled.div`
   padding: 1.45rem 1.0875rem;
 `;
 
-const Header = () => (
+const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <HeaderContainer>
       <h1>
         <Link to="/">
           <img src={logo} alt="Gatsbyjs logo" />
         </Link>
+        {siteTitle}
       </h1>
       <nav>
         <ul>
