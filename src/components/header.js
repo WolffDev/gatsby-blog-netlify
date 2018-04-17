@@ -3,19 +3,19 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-import logo from '../images/gatsby.svg';
+import logo from '../images/logo.svg';
 
 const HeaderWrapper = styled.div`
   background: #524763;
   margin-bottom: 1.45rem;
-  overflot: hidden;
+  overflow: hidden;
   position: relative;
   height: 70vh;
   a {
     color: #fff;
   }
-  img {
-    height: 100px;
+  .header-logo {
+    height: 150px;
   }
 `;
 const HeaderContainer = styled.div`
@@ -29,11 +29,9 @@ const HeaderContainer = styled.div`
 const Header = ({ data }) => (
   <HeaderWrapper>
     <HeaderContainer>
-      <h1>
-        <Link to="/">
-          <img src={logo} alt="Gatsbyjs logo" />
-        </Link>
-      </h1>
+      <Link to="/">
+        <img src={logo} alt="Gatsbyjs logo" className="header-logo" />
+      </Link>
       <nav>
         <ul>
           <li>
