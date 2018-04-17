@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: WolffDev/gatsby-blog-netlify
 
 media_folder: static/assets
 
