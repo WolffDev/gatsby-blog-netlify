@@ -48,7 +48,8 @@ export default class Header extends Component {
   componentDidUpdate = (prevProps, prevState) => {
     const { location } = this.props;
     if (location.pathname !== prevProps.location.pathname) {
-      if (this.props.location.pathname === '/') {
+      // if (this.props.location.pathname === '/') { // needed when not on github pages
+      if (this.props.location.pathname === '/gatsby-blog-netlify') {
         this.wrapper.animate([
           { height: '20vh' },
           { height: '70vh' },
