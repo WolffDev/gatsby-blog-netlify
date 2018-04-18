@@ -4,13 +4,14 @@ import React, { Component } from 'react';
 export default class PostPage extends Component {
 	render() {
 		const { data } = this.props;
+		if (!data) return null;
 		return (
 			<div>
-				<h4>{data.markdownRemark.frontmatter.date}</h4>
-				<h1>{data.markdownRemark.frontmatter.title}</h1>
-				<div
+				<h4>{data.contentfulBlogPost.date}</h4>
+				<h1>{data.contentfulBlogPost.title}</h1>
+				<p
 					dangerouslySetInnerHTML={{
-						__html: data.markdownRemark.html
+						__html: data.contentfulBlogPost.body.childMarkdownRemark.html
 					}}
 				/>
 			</div>
@@ -20,12 +21,16 @@ export default class PostPage extends Component {
 
 export const query = graphql`
 	query BlogPostQuery($slug: String!) {
-		markdownRemark(fields: { slug: { eq: $slug } }) {
-			html
-			frontmatter {
-				title
-				date(formatString: "DD MMMM YYYY")
+		contentfulBlogPost(slug: {eq: $slug}) {
+			id
+			title
+			body {
+				childMarkdownRemark {
+					html
+					excerpt
+				}
 			}
+			slug
 		}
 	}
 `;

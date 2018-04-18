@@ -9,7 +9,14 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-netlify-cms',
+    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: 'wdqqn2v2qrt8',
+        accessToken: '3a3a0565530db66c74656a2defbef5272d6a94bdd57734c4c095a2fd225e16d0'
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -29,12 +36,6 @@ module.exports = {
       options: {
         name: 'src',
         path: `${__dirname}/src/`
-      }
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        excerpt_separator: `<!-- end -->`
       }
     },
   ],
