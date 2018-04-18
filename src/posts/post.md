@@ -6,4 +6,4 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas cumque corpor
 
 Tester Billede:
 
-![](/static/assets/most-impressive-landscape-03297712.jpg)
+![](/assets/most-impressive-landscape-03297712.jpg)
