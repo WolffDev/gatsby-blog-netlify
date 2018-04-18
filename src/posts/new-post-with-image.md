@@ -5,4 +5,4 @@ image: /assets/most-impressive-landscape-03297712.jpg
 ---
 There should be an image below!
 
-![](/assets/most-impressive-landscape-07134629.jpg)
+![null](/assets/most-impressive-landscape-07134629.jpg)
