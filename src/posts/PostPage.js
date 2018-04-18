@@ -21,7 +21,9 @@ export default class PostPage extends Component {
 
 export const query = graphql`
 	query BlogPostQuery($slug: String!) {
-		contentfulBlogPost(slug: {eq: $slug}) {
+		contentfulBlogPost(
+				slug: {eq: $slug}
+			) {
 			id
 			title
 			body {

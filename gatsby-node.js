@@ -5,7 +5,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 	return new Promise((resolve, reject) => {
 		graphql(`
 			{
-				allContentfulBlogPost {
+				allContentfulBlogPost(filter: {node_locale: {regex: "/en-US/"}}) {
 					edges {
 						node {
 							slug

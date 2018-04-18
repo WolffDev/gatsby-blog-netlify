@@ -22,7 +22,7 @@ export const query = graphql`
         desc
       }
     }
-    allContentfulBlogPost {
+    allContentfulBlogPost(filter: {node_locale: {regex: "/en-US/"}}) {
       edges {
         node {
           id
