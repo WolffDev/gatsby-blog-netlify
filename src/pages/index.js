@@ -32,7 +32,7 @@ export const query = graphql`
               excerpt
             }
           }
-          createdAt(formatString: "DD MMMM, YYYY")
+          createdAt(formatString: "DD MMMM, YYYY" fromNow: true locale: "da")
           slug
         }
       }
